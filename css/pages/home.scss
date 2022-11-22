@@ -19,6 +19,10 @@
         }
         a {
           color: var(--text-color);
+          &:hover {
+            color: #fff;
+
+          }
         }
       }
       .info {

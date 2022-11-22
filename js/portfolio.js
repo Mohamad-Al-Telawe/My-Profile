@@ -25,13 +25,16 @@ document.querySelectorAll(".colors div").forEach((color) => {
 
 // Change Mode
 let modeIcon = document.querySelector(".mode i");
+let logo = document.querySelector(".logo img");
 modeIcon.onclick = () => {
   if (modeIcon.classList.contains("fa-moon")) {
-    modeIcon.className = "fa-solid fa-sun";
+    logo.src = "imgs/logo-light.png";
     document.body.className = "sun-mode";
+    modeIcon.className = "fa-solid fa-sun";
   } else {
-    modeIcon.className = "fa-solid fa-moon";
-
     document.body.className = " ";
+    logo.src = "imgs/logo-dark.png";
+    modeIcon.className = "fa-solid fa-moon";
   }
 };
+console.log();

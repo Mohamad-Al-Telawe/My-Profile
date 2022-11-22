@@ -187,6 +187,9 @@ img {
   -moz-transition: 0.75s;
   -ms-transition: 0.75s;
   -o-transition: 0.75s;
+  img {
+    width: 40px;margin-left: 10px;
+  }
 }
 .hidden {
   opacity: 0;
