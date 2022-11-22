@@ -1,0 +1,99 @@
+.skills {
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+
+    .skill {
+      border: 1px solid #777;
+      width: 200px;
+      min-height: 300px;
+      text-align: center;
+      border-radius: 10px;
+      background: var(--skill-back-color);
+      -webkit-border-radius: 10px;
+      -moz-border-radius: 10px;
+      -ms-border-radius: 10px;
+      -o-border-radius: 10px;
+      .percent {
+        font-size: 36px;
+        padding: 10px;
+        font-weight: 600;
+      }
+      .waves {
+        position: relative;
+        overflow: hidden;
+        height: 50px;
+        width: 100%;
+        .wave {
+          position: absolute;
+          bottom: 0;
+          width: 1000px;
+          height: 40px;
+          background: url(imgs/wave.png);
+          background-repeat: repeat-x;
+          background-size: 200px 40px;
+          &.wave1 {
+            animation: 30s linear wave1 infinite;
+            opacity: 0.85;
+
+            -webkit-animation: 30s linear wave1 infinite;
+          }
+          &.wave2 {
+            animation: 20s linear wave2 infinite;
+
+            opacity: 0.5;
+            -webkit-animation: 20s linear wave2 infinite;
+          }
+          &.wave3 {
+            animation: 30s linear wave3 infinite;
+
+            opacity: 0.75;
+            -webkit-animation: 30s linear wave3 infinite;
+          }
+        }
+      }
+      .info {
+        padding: 20px;
+        background-color: white;
+        border-radius: 0 0 10px 10px;
+        -webkit-border-radius: 0 0 10px 10px;
+        -moz-border-radius: 0 0 10px 10px;
+        -ms-border-radius: 0 0 10px 10px;
+        -o-border-radius: 0 0 10px 10px;
+        color: #777;
+        h3 {
+          font-size: 36px;
+          color: #333;
+          margin: 10px 0;
+        }
+        i {
+          &.fa-html5 {
+            color: #f06529;
+          }
+          &.fa-css3-alt {
+            color: #2965f1;
+          }
+          &.fa-js {
+            color: #f0db4f;
+          }
+          &.fa-sass {
+            color: #cc6699;
+          }
+          &.fa-react {
+            color: #61dbfb;
+          }
+          &.fa-node {
+            color: #3c873a;
+          }
+          &.fa-bootstrap {
+            color: #602c50;
+          }
+          font-size: 100px;
+        }
+      }
+    }
+  }
+}

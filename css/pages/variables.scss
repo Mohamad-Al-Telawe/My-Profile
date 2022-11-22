@@ -1,0 +1,194 @@
+:root {
+  /*   =============== Colors ===============   */
+
+  /*  ##### Main Color ##### */
+  /*  pink:350 orange:25 yellow:50 green:120 blue:220  */
+  --hue-color: 120;
+
+  /*  ##### HSL Color Mode ##### */
+  /*  Main Colors  */
+  
+  /*  Night Mode  */
+  --first-color: hsl(var(--hue-color), 69%, 61%);
+  --first-color-alt: hsl(var(--hue-color), 53%, 57%);
+  --title-color: hsl(var(--hue-color), 8%, 65%);
+  --text-color: hsl(var(--hue-color), 8%, 80%);
+  --body-color: hsl(120, 60%, 1%);
+  --container-color: hsl(120, 70%, 1.5%);
+  --footer-color: linear-gradient(
+    hsl(var(--hue-color), 69%, 2%),
+    hsl(var(--hue-color), 69%, 10%)
+  );
+  --skill-back-color: #111;
+
+  /*  Sun Mode  */
+  .sun-mode {
+    --first-color: hsl(var(--hue-color), 69%, 61%);
+    --first-color-alt: hsl(var(--hue-color), 53%, 57%);
+    --title-color: hsl(var(--hue-color), 8%, 15%);
+    --text-color: hsl(var(--hue-color), 8%, 40%);
+    --text-color: hsl(var(--hue-color), 8%, 40%);
+    --body-color: hsl(var(--hue-color), 60%, 99%);
+    --container-color: #fff;
+    --footer-color: linear-gradient(
+      hsl(var(--hue-color), 69%, 50%),
+      hsl(var(--hue-color), 69%, 20%)
+    );
+    --skill-back-color: linear-gradient(
+      rgb(236, 236, 236),
+      rgba(0, 0, 0, 0.3) 30%
+    );
+  }
+  
+  /*   =============== Font Size ===============   */
+  --big-font-size: 2rem;
+  --h1-font-size: 1.5rem;
+  --h2-font-size: 1.25rem;
+  --h3-font-size: 1.125rem;
+  --normal-font-size: 0.938rem;
+  --small-font-size: 0.813rem;
+  --smaller-font-size: 0.75rem;
+
+  /*  ##### Font Size For Large Devices ##### */
+  @media screen and (min-width: 968px) {
+    --big-font-size: 3rem;
+    --h1-font-size: 2.25rem;
+    --h2-font-size: 1.5rem;
+    --h3-font-size: 1.25rem;
+    --normal-font-size: 1rem;
+    --small-font-size: 0.875rem;
+    --smaller-font-size: 0.813rem;
+  }
+
+  /*   =============== Font Type ===============   */
+  --body-font: "Open Sans", sans-serif;
+
+  /*   =============== Transitions ===============   */
+  --main-transition: 0.3s;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/*  ============= BASE =============  */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: var(--body-font);
+  background-color: var(--body-color);
+  font-size: var(--normal-font-size);
+  color: var(--text-color);
+}
+
+h1,
+h2,
+h3,
+h4 {
+  color: var(--title-color);
+  font-weight: 500;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/*  Container  */
+.container {
+  // padding: 50px;
+  padding-top: 50px;
+  margin: auto;
+
+  background-color: var(--container-color);
+  @media (min-width: 768px) {
+    width: 720px;
+  }
+  @media (min-width: 992px) {
+    width: 970px;
+  }
+  @media (min-width: 1200px) {
+    width: 1170px;
+  }
+}
+/*  Main Title  */
+.main-title {
+  position: relative;
+  margin: 75px auto 75px;
+  width: fit-content;
+  background-color: var(--first-color);
+  padding: 10px 30px;
+  color: #fff;
+  &::after {
+    content: "";
+    position: absolute;
+    background-color: var(--first-color);
+    width: 60%;
+    height: 5px;
+    left: 50%;
+    bottom: -30px;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    background-color: #fff;
+    left: 50%;
+    border: 5px solid var(--first-color);
+    z-index: 2;
+    width: 10px;
+    height: 10px;
+    bottom: -37.5px;
+    transform: translateX(-50%);
+    border-radius: 50%;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+  }
+  & + div {
+    padding: 50px;
+  }
+}
+.loading {
+  position: fixed;
+  z-index: 100;
+  background-color: black;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  color: #fff;
+  font-size: var(--h1-font-size);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.75s;
+  -webkit-transition: 0.75s;
+  -moz-transition: 0.75s;
+  -ms-transition: 0.75s;
+  -o-transition: 0.75s;
+}
+.hidden {
+  opacity: 0;
+  visibility: hidden;
+}

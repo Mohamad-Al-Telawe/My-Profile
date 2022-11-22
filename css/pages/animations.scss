@@ -1,0 +1,33 @@
+@keyframes wave1 {
+  0% {
+    background-position-x: 0;
+  }
+  100% {
+    background-position-x: -1000px;
+  }
+}
+@keyframes wave2 {
+  0% {
+    background-position-x: 100px;
+  }
+  100% {
+    background-position-x: 1100px;
+  }
+}
+@keyframes wave3 {
+  0% {
+    background-position-x: -300px;
+  }
+  100% {
+    background-position-x: -1300px;
+  }
+}
+@keyframes hidden {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    display: none;
+  }
+}
